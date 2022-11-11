@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application1234</string>
+    <string name="btn_calc">ماشین حساب</string>
+    <string name="btn_add_product">افزودن محصول</string>
+    <string name="btn_product_list">لیست محصولات</string>
+    <string name="btn_add_category">افزودن دسته بندی</string>
+
+</resources>
