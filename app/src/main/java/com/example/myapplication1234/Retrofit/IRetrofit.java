@@ -30,7 +30,7 @@ public interface IRetrofit {
     Call<ResponseBody> RegisterUser(@Query("U_iduser") String U_id,
                                     @Query("U_idreshte") int U_idreshte);
 
-    @POST("SelectReshte.php")
-    Call<List<Reshte_Model>> SelectReshte();
+//    @POST("SelectReshte.php")
+//    Call<List<Reshte_Model>> SelectReshte();
 
 }
