@@ -13,9 +13,15 @@
         android:orientation="vertical">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinner_cat"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="30dp" />
+        <Spinner
+            android:layout_marginTop="20dp"
+            android:id="@+id/spinner_pr"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
