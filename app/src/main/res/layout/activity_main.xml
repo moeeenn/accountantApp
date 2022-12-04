@@ -13,6 +13,7 @@
         android:orientation="vertical">
         <Button
             android:layout_width="200dp"
+            android:id="@+id/btn1"
             android:textColor="@color/black"
             android:text="@string/btn_calc"
             android:backgroundTint="@color/color2"
