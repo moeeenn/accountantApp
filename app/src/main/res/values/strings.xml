@@ -5,5 +5,7 @@
     <string name="btn_product_list">لیست محصولات</string>
     <string name="btn_add_category">افزودن دسته بندی</string>
     <string name="input_category">افزودن دسته بندی</string>
+    <string name="add_factor">تایید فاکتور</string>
+
 
 </resources>

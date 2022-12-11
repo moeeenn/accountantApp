@@ -8,12 +8,12 @@ import android.os.Bundle;
 import com.example.myapplication1234.Config.Config;
 import com.example.myapplication1234.Retrofit.IRetrofit;
 import com.example.myapplication1234.Retrofit.RetrofitClient;
-/*
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-*/
+
 public class MainActivity2 extends AppCompatActivity {
 
     IRetrofit iRetrofit;

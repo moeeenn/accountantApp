@@ -14,7 +14,7 @@ public class New_factor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_factor);
         String[] arraySpinner = new String[]{
-                "PlaceHolder_1","PlaceHolder_2","PlaceHolder_3",
+                "دسته بندی","PlaceHolder_2","PlaceHolder_3",
         };
         Spinner s = (Spinner) findViewById(R.id.spinner_cat);
         ArrayAdapter adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,arraySpinner);
@@ -22,10 +22,10 @@ public class New_factor extends AppCompatActivity {
         s.setAdapter(adapter1);
 
         String[] arraySpinner2 = new String[]{
-                "PlaceHolder_1","PlaceHolder_2","PlaceHolder_3",
+                "محصول","PlaceHolder_2","PlaceHolder_3",
         };
         Spinner s1 = (Spinner) findViewById(R.id.spinner_pr);
-        ArrayAdapter adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,arraySpinner);
+        ArrayAdapter adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,arraySpinner2);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s1.setAdapter(adapter2);
     }
