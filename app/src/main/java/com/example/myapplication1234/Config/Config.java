@@ -9,12 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class Config {
 
     public static final String TAG = "Eyrsa";
-    public static final String BASE_URL = "http://alifeyzabadi.ir/eyrsa/api/";
-    public static final String ADMIN_URL = "Admin/";
+    public static final String BASE_URL = "https://hamraahmobile.ir/App/";
 
 
 
@@ -24,6 +26,15 @@ public class Config {
 
         return connectivityManager != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting();
     }
-
+    public static String jsonObject(String key, String json) {
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = new JSONObject(json);
+            return jsonObject.getString(key);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return "false";
+        }
+    }
 
 }
