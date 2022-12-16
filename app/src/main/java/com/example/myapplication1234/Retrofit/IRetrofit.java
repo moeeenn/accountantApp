@@ -1,6 +1,7 @@
 package com.example.myapplication1234.Retrofit;
 
 
+import com.example.myapplication1234.Model.get_category;
 import com.example.myapplication1234.Model.test;
 
 import java.util.List;
@@ -21,8 +22,11 @@ public interface IRetrofit {
 //    Call<List<test>> SelectReshte();
 
 
-    // add
+    // add category
     @POST("add_category.php")
     Call<ResponseBody> add_category(@Query("text") String text);
 
+    // add get category
+    @POST("get_category.php")
+    Call<List<get_category>> set_category();
 }

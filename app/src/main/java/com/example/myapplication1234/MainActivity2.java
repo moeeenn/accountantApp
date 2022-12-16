@@ -9,12 +9,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.myapplication1234.Config.Config;
+import com.example.myapplication1234.Model.get_category;
 import com.example.myapplication1234.Model.test;
 import com.example.myapplication1234.Retrofit.IRetrofit;
 import com.example.myapplication1234.Retrofit.RetrofitClient;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -28,7 +30,6 @@ public class MainActivity2 extends AppCompatActivity {
     EditText categoryText;
     Button btn_add;
 
-    ArrayList<test> a=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,20 +68,6 @@ public class MainActivity2 extends AppCompatActivity {
                 });
             }
         });
-
-
-//        iRetrofit.SelectReshte().enqueue(new Callback<List<test>>() {
-//            @Override
-//            public void onResponse(Call<List<test>> call, Response<List<test>> response) {
-//                a.addAll(response.body());
-//                int id=a.get(0).getId();
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<test>> call, Throwable t) {
-//
-//            }
-//        });
 
     }
 }

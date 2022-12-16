@@ -11,13 +11,27 @@
 
     <Spinner
         android:layout_width="match_parent"
+        android:id="@+id/spinner_cat2"
         android:layout_height="wrap_content">
     </Spinner>
     <EditText
         android:layout_width="240dp"
         android:layout_marginTop="40dp"
         android:textAlignment="center"
+        android:hint="@string/input_product_name"
         android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/input_product_price"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/input_product_num"
+        android:layout_marginTop="20dp"/>
     <Button
         android:layout_width="wrap_content"
         android:text="@string/btn_add_product"
