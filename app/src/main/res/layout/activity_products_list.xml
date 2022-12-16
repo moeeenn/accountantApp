@@ -8,60 +8,10 @@
     android:orientation="vertical"
     tools:context=".products_list_activity">
 
-  <LinearLayout
+  <androidx.recyclerview.widget.RecyclerView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_marginTop="7dp"
-      android:backgroundTint="@color/color2"
-      android:gravity="right"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/product_name"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/product_c_id"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/product_price"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/product_num"
-        android:layout_height="wrap_content"
-        android:text="@string/input_product_name"
-        />
-
-
-  </LinearLayout>
+      android:layout_height="match_parent"
+    android:id="@+id/recyclerView"
+    />
 
   </LinearLayout>
