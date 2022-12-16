@@ -47,7 +47,7 @@ public class Add_Product_activity extends AppCompatActivity {
                     mylist[i]=cats.get(i).getC_name();
 
                 }
-                ArrayAdapter<String> adapter =new ArrayAdapter<String>(Add_Product_activity.this, android.R.layout.simple_spinner_item,mylist);
+                ArrayAdapter<String> adapter =new ArrayAdapter<String>(Add_Product_activity.this, android.R.layout.simple_spinner_dropdown_item,mylist);
 //                adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 s.setAdapter(adapter);
 
