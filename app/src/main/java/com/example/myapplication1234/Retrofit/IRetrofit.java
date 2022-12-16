@@ -29,4 +29,9 @@ public interface IRetrofit {
     // add get category
     @POST("get_category.php")
     Call<List<get_category>> set_category();
+
+    //add product
+    @POST("add_product.php")
+    Call<ResponseBody> add_product(@Query("text") String text,@Query("price") int price,
+                                   @Query("num") int num,@Query("c_id") int c_id);
 }
