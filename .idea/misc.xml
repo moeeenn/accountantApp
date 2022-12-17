@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MyProjects/Android/accountantApp/app/src/main/res/layout/activity_products_list.xml" value="0.1859375" />
-        <entry key="..\:/MyProjects/Android/accountantApp/app/src/main/res/layout/item_recycler_product_list.xml" value="0.2" />
-        <entry key="..\:/MyProjects/Android/accountantApp/app/src/main/res/layout/recycler_layout.xml" value="0.1859375" />
+        <entry key="..\:/Users/library/AndroidStudioProjects/accountantApp/app/src/main/res/layout/activity_main2.xml" value="0.209375" />
+        <entry key="..\:/Users/moin/AndroidStudioProjects/MyApplication1234/app/src/main/res/layout/activity_add_product.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/moin/AndroidStudioProjects/MyApplication1234/app/src/main/res/layout/activity_main.xml" value="0.128" />
         <entry key="..\:/Users/moin/AndroidStudioProjects/MyApplication1234/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/Users/moin/AndroidStudioProjects/MyApplication1234/app/src/main/res/layout/activity_new_factor.xml" value="0.1" />
+        <entry key="..\:/Users/moin/AndroidStudioProjects/MyApplication1234/app/src/main/res/layout/activity_products_list.xml" value="0.20092592592592592" />
+        <entry key="..\:/Users/moin/AndroidStudioProjects/MyApplication1234/app/src/main/res/layout/recycler_layout.xml" value="0.4" />
       </map>
     </option>
   </component>

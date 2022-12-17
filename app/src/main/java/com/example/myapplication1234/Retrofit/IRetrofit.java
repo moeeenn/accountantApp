@@ -2,6 +2,7 @@ package com.example.myapplication1234.Retrofit;
 
 
 import com.example.myapplication1234.Model.get_category;
+import com.example.myapplication1234.Model.get_products;
 import com.example.myapplication1234.Model.test;
 
 import java.util.List;
@@ -34,4 +35,8 @@ public interface IRetrofit {
     @POST("add_product.php")
     Call<ResponseBody> add_product(@Query("text") String text,@Query("price") int price,
                                    @Query("num") int num,@Query("c_id") int c_id);
+
+    // set product list
+    @POST("get_products.php")
+    Call<List<get_products>> set_product_list();
 }

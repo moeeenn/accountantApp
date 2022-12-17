@@ -9,7 +9,10 @@
     <string name="input_product_name">نام محصول</string>
     <string name="input_product_price">قیمت محصول</string>
     <string name="input_product_num">به ازای هر تعداد/گرم</string>
-
+    <string name="product_name">نام محصول : </string>
+    <string name="category">دسته بندی : </string>
+    <string name="price">قیمت : </string>
+    <string name="num">نسبت : </string>
 
 
 

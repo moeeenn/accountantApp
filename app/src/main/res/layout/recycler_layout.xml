@@ -8,20 +8,23 @@
     android:orientation="vertical"
     tools:context=".products_list_activity"
     android:id="@+id/linear"
+    android:gravity="right"
+    android:layoutDirection="rtl"
+    android:layout_marginTop="20dp"
+    android:background="#B4D4EA"
     >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="7dp"
-        android:backgroundTint="@color/color2"
-        android:gravity="right"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="center"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/input_product_name"
+            android:gravity="center"
+            android:text="@string/product_name"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -32,18 +35,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/input_product_name"
+            android:text="@string/category"
             />
         <TextView
             android:layout_width="wrap_content"
-            android:id="@+id/product_c_id"
+            android:id="@+id/product_c_name"
             android:layout_height="wrap_content"
             android:text="@string/input_product_name"
             />
+    </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/input_product_name"
+            android:text="@string/price"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -54,7 +63,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/input_product_name"
+            android:text="@string/num"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -63,8 +72,6 @@
             android:text="@string/input_product_name"
             />
 
-
-
-    </LinearLayout>
+    </LinearLayout>>
 
 </LinearLayout>

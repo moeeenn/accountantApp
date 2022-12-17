@@ -36,9 +36,9 @@ public class Product_list_adapter extends RecyclerView.Adapter<Product_list_adap
 
     @Override
     public void onBindViewHolder(@NonNull Product_list_adapter.MyViewHolder holder, int position) {
-        holder.product_name.setText(arrayGetProducts.get(position).getC_name());
-        holder.product_c_id.setText(arrayGetProducts.get(position).getC_id() + "");
-        holder.product_price.setText(arrayGetProducts.get(position).getP_price() + "");
+        holder.product_name.setText(arrayGetProducts.get(position).getP_name() + "  ");
+        holder.product_c_name.setText(arrayGetProducts.get(position).getC_name() + "");
+        holder.product_price.setText(arrayGetProducts.get(position).getP_price() + "  ");
         holder.product_num.setText(arrayGetProducts.get(position).getP_num() + "");
 
         holder.linear.setOnClickListener(new View.OnClickListener() {
@@ -57,13 +57,13 @@ public class Product_list_adapter extends RecyclerView.Adapter<Product_list_adap
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView product_name, product_c_id, product_price, product_num;
+        TextView product_name, product_c_name, product_price, product_num;
         LinearLayout linear;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             product_name = itemView.findViewById(R.id.product_name);
-            product_c_id = itemView.findViewById(R.id.product_c_id);
+            product_c_name = itemView.findViewById(R.id.product_c_name);
             product_price = itemView.findViewById(R.id.product_price);
             product_num = itemView.findViewById(R.id.product_num);
             linear = itemView.findViewById(R.id.linear);
