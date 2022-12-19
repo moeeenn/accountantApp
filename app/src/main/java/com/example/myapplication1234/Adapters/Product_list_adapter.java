@@ -1,7 +1,11 @@
 package com.example.myapplication1234.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication1234.MainActivity;
 import com.example.myapplication1234.Model.get_products;
 import com.example.myapplication1234.R;
+import com.example.myapplication1234.edit_product_activity;
 
 import java.util.ArrayList;
+import java.util.prefs.Preferences;
 
 public class Product_list_adapter extends RecyclerView.Adapter<Product_list_adapter.MyViewHolder> {
 
@@ -44,8 +50,16 @@ public class Product_list_adapter extends RecyclerView.Adapter<Product_list_adap
         holder.linear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent intent = new Intent(context,edit_product_activity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("p_id",arrayGetProducts.get(holder.getAdapterPosition()).getP_id());
+                bundle.putInt("c_id",arrayGetProducts.get(holder.getAdapterPosition()).getC_id());
+                bundle.putString("p_name",arrayGetProducts.get(holder.getAdapterPosition()).getP_name());
+                bundle.putInt("p_price",arrayGetProducts.get(holder.getAdapterPosition()).getP_price());
+                bundle.putInt("p_num",arrayGetProducts.get(holder.getAdapterPosition()).getP_num());
+
+                intent.putExtras(bundle);
+
                 context.startActivity(intent);
             }
         });

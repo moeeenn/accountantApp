@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyApplication1234"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name=".edit_product_activity"
+            android:exported="true" />
+        <activity
             android:name=".products_list_activity"
             android:exported="true" />
         <activity
