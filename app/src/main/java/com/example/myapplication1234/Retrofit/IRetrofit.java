@@ -41,6 +41,7 @@ public interface IRetrofit {
     Call<List<get_products>> set_product_list();
 
     // edit/delete product
-    @POST("edit-delete_product.php")
-    Call<ResponseBody> edit_delete_category(@Query("text") String text,@Query("condition") String edit_delete);
+    @POST("edit_delete.php")
+    Call<ResponseBody> edit_delete_product(@Query("p_name") String text,@Query("condition") int edit_delete,@Query("p_id") int id,
+                                            @Query("p_price") int p_price,@Query("p_num") int p_num,@Query("c_id") int c_id);
 }

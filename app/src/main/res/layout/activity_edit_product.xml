@@ -25,6 +25,7 @@
     <EditText
         android:layout_width="240dp"
         android:id="@+id/p_price2"
+        android:inputType="number"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:hint="@string/input_product_price"
@@ -32,6 +33,7 @@
     <EditText
         android:layout_width="240dp"
         android:id="@+id/p_num2"
+        android:inputType="number"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:hint="@string/input_product_num"
@@ -39,7 +41,7 @@
     <Button
         android:layout_width="wrap_content"
         android:text="@string/edit"
-        android:id="@+id/btn_edit_product2"
+        android:id="@+id/btn_edit_product"
         android:layout_height="wrap_content"/>
     <Button
         android:layout_width="wrap_content"

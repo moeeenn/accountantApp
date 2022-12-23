@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".products_list_activity"
     android:id="@+id/linear"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
     android:gravity="right"
     android:layoutDirection="rtl"
     android:layout_marginTop="20dp"

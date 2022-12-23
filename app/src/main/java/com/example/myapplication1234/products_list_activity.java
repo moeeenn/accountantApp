@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.myapplication1234.Adapters.Product_list_adapter;
 import com.example.myapplication1234.Config.Config;
@@ -49,13 +50,24 @@ public class products_list_activity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<get_products>> call, Throwable t) {
-
+                Toast.makeText(products_list_activity.this, "خطا در برقراری ارتباط", Toast.LENGTH_SHORT).show();
             }
         });
 
 
 
 
+
+    }
+
+    public void onRestart(){
+
+        super.onRestart();
+
+        finish();
+        overridePendingTransition(0,0);
+        startActivity(getIntent());
+        overridePendingTransition(0,0);
 
     }
 }
