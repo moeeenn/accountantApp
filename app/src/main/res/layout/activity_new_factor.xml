@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
     tools:context=".New_factor">
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,9 +23,19 @@
             android:id="@+id/spinner_pr"
             android:layout_width="match_parent"
             android:layout_height="30dp" />
-        <ListView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="460dp"/>
+            android:layout_height="300dp">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_customer"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -55,9 +55,6 @@ public class products_list_activity extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
     public void onRestart(){

@@ -61,7 +61,7 @@ public class Add_Product_activity extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<List<get_category>> call, Throwable t) {
-
+                Toast.makeText(Add_Product_activity.this, "خطا در برقراری ارتباط", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
     android:gravity="center"
     tools:context=".Add_Product_activity">
 
