@@ -25,9 +25,11 @@ import com.example.myapplication1234.Retrofit.IRetrofit;
 import com.example.myapplication1234.Retrofit.RetrofitClient;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -219,7 +221,34 @@ public class New_factor extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                if (factorList.size()>0){
+                    String text = null;
+                    for (int i=0;i<factorList.size();i++)
+                    {
+                        text=factorList.get(i).toString()+",";
+                    }
+                    iRetrofit.add_factor(text).enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            try {
+                                String message=Config.jsonObject("message",response.body().string());
+                                if (message.equals("1"))
+                                {
+                                    Toast.makeText(New_factor.this, "موفقیت آمیز بود", Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                    Toast.makeText(New_factor.this, "موفقیت آمیز نبود", Toast.LENGTH_SHORT).show();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
 
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Toast.makeText(New_factor.this, "خطا در برقراری ارتباط", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
 
 
             }
