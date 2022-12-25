@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication1234.Adapters.FactorListAdapter;
@@ -50,7 +51,10 @@ public class New_factor extends AppCompatActivity {
     List <String> productsName=new ArrayList<String>();
     Button btnAdd,btnFinish;
     ListView factorView;
-    List <String> factorList=new ArrayList<String>();
+    List <Integer> factorList=new ArrayList<>();
+    TextView sum;
+    int finalSum = 0;
+
 
 
 
@@ -64,6 +68,7 @@ public class New_factor extends AppCompatActivity {
         s1 = findViewById(R.id.spinner_cat);
         q=findViewById(R.id.q_edit);
         factorView=findViewById(R.id.factor);
+        sum=findViewById(R.id.sum_price);
 
         list_item = new ArrayList<CustomFactorItem>();
         listAdapter = new FactorListAdapter(New_factor.this,list_item);
@@ -149,6 +154,8 @@ public class New_factor extends AppCompatActivity {
                             price=arrayGetProducts.get(b).getP_price();
                             pId=products.get(j);
 
+
+
                         }
                     }
                 }
@@ -172,18 +179,51 @@ public class New_factor extends AppCompatActivity {
 
                 int FinalPrice=(price/num)*Finalnum;
 
+                factorList.add(pId);
+                factorList.add(FinalPrice);
+                factorList.add(num);
+                finalSum=finalSum+FinalPrice;
+                sum.setText(String.valueOf(finalSum));
 
                 String details="قیمت واحد:" + price + " - " + "مقدار:" + Finalnum + " - " + "قیمت کل:" + FinalPrice;
                 list_item.add(new CustomFactorItem(name,details,pId));
+                listAdapter.notifyDataSetChanged();
 
+
+
+
+            }
+        });
+
+        factorView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                int c=factorList.indexOf(list_item.get(i).getId());
+                list_item.remove(i);
+                listAdapter.notifyDataSetChanged();
+                finalSum -= factorList.get(c + 1);
+                factorList.remove(c+2);
+                factorList.remove(c+1);
+                factorList.remove(c);
+                sum.setText(String.valueOf(finalSum));
+                return false;
             }
         });
 
 
 
-
         btnFinish=findViewById(R.id.finish_factor);
 
+        btnFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
+
+            }
+        });
 
 
 

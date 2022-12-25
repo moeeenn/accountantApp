@@ -48,12 +48,13 @@ public class FactorListAdapter extends BaseAdapter {
         list_name.setText(customFactorItem2.get(i).getName());
         list_detail.setText(customFactorItem2.get(i).getDetails());
 
-        view.setOnClickListener(new View.OnClickListener() {
+        /*view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 customFactorItem2.remove(i);
+                notify();
             }
-        });
+        });*/
 
         return view;
     }

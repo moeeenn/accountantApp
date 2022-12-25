@@ -5,9 +5,11 @@ import com.example.myapplication1234.Model.get_category;
 import com.example.myapplication1234.Model.get_products;
 import com.example.myapplication1234.Model.test;
 
+import java.util.ArrayList;
 import java.util.List;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Field;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -44,4 +46,10 @@ public interface IRetrofit {
     @POST("edit_delete.php")
     Call<ResponseBody> edit_delete_product(@Query("p_name") String text,@Query("condition") int edit_delete,@Query("p_id") int id,
                                             @Query("p_price") int p_price,@Query("p_num") int p_num,@Query("c_id") int c_id);
+
+    //add factor
+    @POST("add_factor.php")
+    Call<ResponseBody> add_factor(@Field("details[]") List<Integer> products);
 }
+
+
