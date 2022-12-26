@@ -183,7 +183,7 @@ public class New_factor extends AppCompatActivity {
 
                 factorList.add(pId);
                 factorList.add(FinalPrice);
-                factorList.add(num);
+                factorList.add(Finalnum);
                 finalSum=finalSum+FinalPrice;
                 sum.setText(String.valueOf(finalSum));
 
@@ -221,11 +221,14 @@ public class New_factor extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (factorList.size()>0){
-                    String text = null;
-                    for (int i=0;i<factorList.size();i++)
-                    {
-                        text=factorList.get(i).toString()+",";
+                if (factorList.size()>0) {
+                    StringBuilder text = new StringBuilder();
+                    for (int i = 0; i < factorList.size(); i++) {
+                        if (i==factorList.size()-1){
+                            text.append(factorList.get(i).toString());
+                            break;
+                        }
+                        text.append(factorList.get(i).toString()).append("/");
                     }
                     iRetrofit.add_factor(text).enqueue(new Callback<ResponseBody>() {
                         @Override
@@ -248,8 +251,9 @@ public class New_factor extends AppCompatActivity {
                             Toast.makeText(New_factor.this, "خطا در برقراری ارتباط", Toast.LENGTH_SHORT).show();
                         }
                     });
-                }
 
+
+                }
 
             }
         });

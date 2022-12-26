@@ -49,7 +49,7 @@ public interface IRetrofit {
 
     //add factor
     @POST("add_factor.php")
-    Call<ResponseBody> add_factor(@Query("details") String products);
+    Call<ResponseBody> add_factor(@Query("details") StringBuilder products);
 }
 
 
