@@ -1,6 +1,7 @@
 package com.example.myapplication1234.Retrofit;
 
 
+import com.example.myapplication1234.Model.factors;
 import com.example.myapplication1234.Model.get_category;
 import com.example.myapplication1234.Model.get_products;
 import com.example.myapplication1234.Model.test;
@@ -50,6 +51,10 @@ public interface IRetrofit {
     //add factor
     @POST("add_factor.php")
     Call<ResponseBody> add_factor(@Query("details") StringBuilder products);
+
+    //list factor
+    @POST("get_factors.php")
+    Call<List<factors>> get_factors();
 }
 
 
